@@ -1,0 +1,14 @@
+# ApplicationContextInitializer
+org.springframework.context.ApplicationContextInitializer=\
+com.wf.context.AfterHelloWorldApplicationContextInitializer,\
+com.wf.context.HelloWorldApplicationContextInitializer
+
+# ApplicationListener
+org.springframework.context.ApplicationListener=\
+com.wf.listener.AfterHelloWorldApplicationListener,\
+com.wf.listener.HelloWorldApplicationListener,\
+com.wf.listener.BeforeConfigFileApplicationListener
+
+## SpringApplicationRunListener
+org.springframework.boot.SpringApplicationRunListener=\
+com.wf.run.HelloWorldRunListener
