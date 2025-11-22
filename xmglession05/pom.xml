@@ -9,15 +9,14 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xmglession04springmvcwithboot</artifactId>
-    <packaging>war</packaging>
+    <artifactId>xmglession05</artifactId>
+    <packaging>war</packaging>  <!--打包方式-->
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <dependencies>
 
@@ -34,13 +33,18 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--servlet 没有提供这个引擎需要我们字节添加 java.lang.ClassNotFoundException: javax.servlet.jsp.jstl.core.Config-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+
+        <!--jsp-->
+
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
-
-        <!--web mvc 调整到 boot的mvc 需要添加许多东西 -->
         <!-- Provided -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,14 +54,15 @@
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-    </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
+    </dependencies>
+
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+    </build>
 </project>

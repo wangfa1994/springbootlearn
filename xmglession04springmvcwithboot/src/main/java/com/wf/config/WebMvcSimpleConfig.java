@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.JstlView;
  * @since 2018/5/20
  */
 @Configuration
-@EnableWebMvc  // 激活我们的mvc组件 ，这个配置类可以进行删除，这个是spring mvc的如果要使用boot可以增加相关配置
+//@EnableWebMvc  // boot中可以删除了 激活我们的mvc组件 ，这个配置类可以进行删除，这个是spring mvc的如果要使用boot可以增加相关配置
 public class WebMvcSimpleConfig  {
 
 //     <!--<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
@@ -23,7 +23,7 @@ public class WebMvcSimpleConfig  {
 //        <!--<property name="suffix" value=".jsp"/>-->
 //    <!--</bean>-->
     @Bean
-    public ViewResolver viewResolver(){ // EnableWebMvc激活的mvc组件存在资源文件找不到问题进行追加添加，组件默认的不会进行覆盖，只会追加
+    public ViewResolver viewResolver(){ // springboot 默认给我们添加的是不带路径，需要注意的是这个名字自动装配的时候已经存在了，他对应的是ContentNegotiatingViewResolver协商视图view
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/jsp/");

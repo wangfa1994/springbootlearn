@@ -26,7 +26,9 @@
         <module>xmglession04springmvcann</module>
         <module>xmglession04springmvcannauto</module>
 		<module>xmglession04springmvcwithboot</module>
-	</modules>
+		<module>xmglession05</module>
+        <module>xmglession06</module>
+    </modules>
 
     <properties>
 			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
