@@ -5,7 +5,9 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
+		<!--<version>2.0.1.RELEASE</version>-->
+		<version>2.1.10.RELEASE</version>
+		<!--<version>2.5.3</version>-->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -21,6 +23,7 @@
         <module>xmglession01</module>
 		<module>xmglession02</module>
         <module>xmglession03</module>
+		<module>xmglession0301simple</module>
         <module>xmglession04</module>
         <module>xmglession04springmvc</module>
         <module>xmglession04springmvcann</module>
@@ -28,6 +31,8 @@
 		<module>xmglession04springmvcwithboot</module>
 		<module>xmglession05</module>
         <module>xmglession06</module>
+        <module>xmglession07</module>
+		<module>xmglession04springmvcann01</module>
     </modules>
 
     <properties>
@@ -38,6 +43,18 @@
 			<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
+	<!--<dependencyManagement>
+		<dependencies>
+			<dependency>
+				&lt;!&ndash; import dependency management from spring boot &ndash;&gt;
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.0.1.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>-->
 
 
 

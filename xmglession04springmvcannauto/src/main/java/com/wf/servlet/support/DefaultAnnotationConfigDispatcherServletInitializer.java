@@ -22,5 +22,12 @@ public class DefaultAnnotationConfigDispatcherServletInitializer extends
     @Override
     protected String[] getServletMappings() { // 这个是映射路径
         return new String[]{"/"};
+        // return of("/");
     }
+
+    // 便利API，减少new T[] 代码
+    private static <T> T[] of(T... values){
+        return  values;
+    }
+
 }

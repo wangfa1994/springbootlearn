@@ -11,11 +11,16 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * SpringApplication 是Springboot的引导类
+* SpringApplication 基本使用
+*
+* */
 public class SpringbootApplication {
 
     public static void main(String[] args) {
-        //SpringApplication.run(SpringbootApplicationConfig.class, args);
-        applicationOther(args);
+        SpringApplication.run(SpringbootApplicationConfig.class, args);
+       // applicationOther(args);
     }
 
     @SpringBootApplication
@@ -31,11 +36,23 @@ public class SpringbootApplication {
         Set<String> sources = new HashSet();
         // 配置Class 名称
         sources.add(SpringbootApplicationConfig.class.getName());
+        // 自定义我们的SpringBoot 应用属性
         SpringApplication springApplication = new SpringApplication();
         springApplication.setSources(sources); // 可以配置xml 路径也是可以的 springApplication里面有很多配置方法
-        springApplication.setWebApplicationType(WebApplicationType.SERVLET);
+        springApplication.setWebApplicationType(WebApplicationType.SERVLET); // 配置为Servlet
         springApplication.run(args);
     }
+
+    /**
+     * springApplication 的准备阶段 实是在构造器中完成的，通过静态方法run，也是会创建SpringApplication对象的
+    * 构造器里会进行推导web应用类型， 设置SpringFactoriesInstances应用上下文初始器(很重要)， 设置监听器(很重要)， 推导引导类
+     *  设置应用上下文初始器，实现了 ApplicationContextInitializer 接口的类
+     *  设置监听器 都是利用了Spring 工厂加载机制
+    *
+     * springApplication的运行阶段 run方法
+     *
+     *
+    * */
 
 
 

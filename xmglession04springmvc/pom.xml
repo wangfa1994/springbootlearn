@@ -32,7 +32,7 @@
             <scope>provided</scope>  <!--spring中没有提供这个jar包，但是在servlet容器中提供了，为了防止冲突所有指定范围-->
         </dependency>
 
-        <dependency> <!--servlet 没有提供这个引擎需要我们字节添加-->
+        <dependency> <!--servlet 没有提供这个引擎需要我们自己添加  jsp 相关的 -->
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>

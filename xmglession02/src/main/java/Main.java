@@ -10,7 +10,7 @@ public class Main {
      *  @Component 作为一种由 Spring 容器托管的通用模式组件，任何被  @Component 标准的组件均为组件扫描的候选对象。类似地，凡是被  @Component 元标注（meta-annotated）的注解，如  @Service ，当任何组件标注它时，也被视作组件扫描的候选对象
      *
      * 除了利用spring内置的一些注解，还可以进行我们自定义注解模式，通过我们自定义的注解来进行相关装配
-     *
+     * 2.0版本定义了@Repository
      * 2.5版本引入了一些通用的注解，@Component @Service @Controller
      * 3.0增加的@Configuration 用于标识配置，@Import注解用于导入单个配置类
      * 3.1的时候又加入了ImportSelector接口规范，可以导入多个配置类，进行条件判断  @ComponentScan可以进行指定包的扫描
